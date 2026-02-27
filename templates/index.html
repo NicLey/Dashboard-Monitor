@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vigilante Nocturno</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.4/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center py-10">
+    <div class="bg-white shadow-lg rounded-2xl p-8 w-full max-w-xl">
+        <h1 class="text-2xl font-bold mb-4 text-center">Vigilante Nocturno</h1>
+        <div class="mb-6 text-center">
+            <p class="text-lg">Última revisión: <span class="font-medium">{{ last_check if last_check else 'sin datos' }}</span></p>
+            <p class="text-lg">
+                Último código de error:
+                <span class="font-bold {% if latest_error > 0 %}text-red-600{% else %}text-green-600{% endif %}">
+                    {{ latest_error }}
+                </span>
+            </p>
+            <p class="mt-2 text-gray-700">Agente de turno: <span class="font-medium">{{ agente.nombre }}</span></p>
+        </div>
+        <div class="flex justify-center">
+            <a href="/check" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl shadow-md transition">
+                Revisar ahora
+            </a>
+        </div>
+    </div>
+</body>
+</html>
