@@ -1,4 +1,4 @@
-# dashboard-Monitor
+# dashboard-monitor
 
 Sistema de monitoreo automatizado para dashboards operativos. 
 Detecta códigos de error, gestiona responsables por turnos y permite ejecución manual de verificaciones desde una interfaz web.
